@@ -1,6 +1,61 @@
  
 
 
+ 
+fetch('https://gnews.io/api/v4/top-headlines?q=politique&country=fr&language=fr&token=5c20e1113984690e47d0c77c02227ca4 ') 
+
+ 
+ 
+.then(function (response) {
+  return response.json();
+  
+})
+
+
+// console.log("working " + response)
+.then(function (data) {
+
+console.log( "working"+data);
+ 
+
+
+
+  let img1 = document.querySelector('.img1')
+// console.log(img1)
+  let imgUrl = document.getElementById('imgUrl')
+  let indexTitle = document.getElementById('indexTitle')
+
+// index img start
+  img1.src= ` ${data.articles[5].image}`
+imgUrl.href=` ${data.articles[5].url}`
+indexTitle.innerHTML=` ${data.articles[(5)].title}`
+indexUrl.href=` ${data.articles[5].url}`
+// index img end 
+
+
+let anchors1 = document.getElementById('anchors1')
+let anchors2 = document.getElementById('anchors2')
+let anchors3 = document.getElementById('anchors3')
+let anchors4 = document.getElementById('anchors4')
+ 
+
+ 
+ anchors1.text =` ${data.articles[1].title}`
+ anchors1.href =` ${data.articles[1].url}`
+ 
+ anchors2.text =` ${data.articles[2].title}`
+ anchors2.href =` ${data.articles[2].url}`
+   
+ anchors3.text =` ${data.articles[3].title}`
+ anchors3.href =` ${data.articles[3].url}`
+   
+ anchors4.text =` ${data.articles[4].title}`
+ anchors4.href =` ${data.articles[4].url}`
+ 
+
+})
+ 
+
 
 
  
@@ -95,61 +150,6 @@ for(let i=0; i<=3; i++)
 
 
  
- 
-fetch('https://gnews.io/api/v4/top-headlines?q=politique&country=fr&language=fr&token=5c20e1113984690e47d0c77c02227ca4 ') 
-
- 
- 
-.then(function (response) {
-  return response.json();
-  
-})
-
-
-// console.log("working " + response)
-.then(function (data) {
-
-console.log( "working"+data);
- 
-
-
-
-  let img1 = document.querySelector('.img1')
-// console.log(img1)
-  let imgUrl = document.getElementById('imgUrl')
-  let indexTitle = document.getElementById('indexTitle')
-
-// index img start
-  img1.src= ` ${data.articles[5].image}`
-imgUrl.href=` ${data.articles[5].url}`
-indexTitle.innerHTML=` ${data.articles[(5)].title}`
-indexUrl.href=` ${data.articles[5].url}`
-// index img end 
-
-
-let anchors1 = document.getElementById('anchors1')
-let anchors2 = document.getElementById('anchors2')
-let anchors3 = document.getElementById('anchors3')
-let anchors4 = document.getElementById('anchors4')
- 
-
- 
- anchors1.text =` ${data.articles[1].title}`
- anchors1.href =` ${data.articles[1].url}`
- 
- anchors2.text =` ${data.articles[2].title}`
- anchors2.href =` ${data.articles[2].url}`
-   
- anchors3.text =` ${data.articles[3].title}`
- anchors3.href =` ${data.articles[3].url}`
-   
- anchors4.text =` ${data.articles[4].title}`
- anchors4.href =` ${data.articles[4].url}`
- 
-
-})
- 
-
 
   let  x = document.querySelector(".fa-bars");
   let  main = document.querySelector("main");
