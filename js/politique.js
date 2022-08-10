@@ -1,8 +1,8 @@
  
 
  
-//  fetch('https://gnews.io/api/v4/top-headlines?q=politiques&country=fr&language=fr&token=5c20e1113984690e47d0c77c02227ca4') 
-  fetch('https://gnews.io/api/v4/top-headlines?q=politiques&country=fr&language=fr&token=4ba691ab1fcd5a75cbb4e787a05ca325') 
+fetch('https://gnews.io/api/v4/top-headlines?q=politiques&country=fr&language=fr&token=5c20e1113984690e47d0c77c02227ca4') 
+  //fetch('https://gnews.io/api/v4/top-headlines?q=politiques&country=fr&language=fr&token=4ba691ab1fcd5a75cbb4e787a05ca325') 
 .then(function (response) {
  return response.json();
  
