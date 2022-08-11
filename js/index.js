@@ -26,10 +26,10 @@ console.log( "working"+data);
   let indexTitle = document.getElementById('indexTitle')
 
 // index img start
-  img1.src= ` ${data.articles[5].image}`
-imgUrl.href=` ${data.articles[5].url}`
-indexTitle.innerHTML=` ${data.articles[(5)].title}`
-indexUrl.href=` ${data.articles[5].url}`
+  img1.src= ` ${data.articles[3].image}`
+imgUrl.href=` ${data.articles[3].url}`
+indexTitle.innerHTML=` ${data.articles[3].title}`
+indexUrl.href=` ${data.articles[3].url}`
 // index img end 
 
 
